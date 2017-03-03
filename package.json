@@ -1,0 +1,18 @@
+{
+  "name": "cta-colours",
+  "version": "1.0.0",
+  "description": "Exploring CTA colours for GDS",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "James Maclean",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^6.7.6",
+    "browser-sync": "^2.18.8",
+    "gulp": "^3.9.1",
+    "gulp-nunjucks": "^3.0.0",
+    "gulp-sass": "^3.1.0"
+  }
+}
