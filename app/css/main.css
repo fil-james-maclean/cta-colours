@@ -73,26 +73,36 @@
     outline: none; }
 
 .btn-radius {
-  border-radius: 6px; }
+  border-radius: 4px; }
 
 .btn-primary {
-  background: #b72f2a;
-  color: #ffffff; }
+  background: #ff8d31;
+  color: #262626; }
   .btn-primary:hover {
-    background: #b72f2a;
-    color: #ffffff; }
+    background: #ffa801;
+    color: #262626; }
   .btn-primary:active {
-    background: #b72f2a;
+    background: #d14905;
+    color: #ffffff; }
+
+.btn-primary2 {
+  background: #86c851;
+  color: #262626; }
+  .btn-primary2:hover {
+    background: #a4d645;
+    color: #262626; }
+  .btn-primary2:active {
+    background: #3b971e;
     color: #ffffff; }
 
 .btn-secondary {
   background: #016fad;
   color: #ffffff; }
   .btn-secondary:hover {
-    background: #016fad;
-    color: #ffffff; }
+    background: #00a6e0;
+    color: #262626; }
   .btn-secondary:active {
-    background: #016fad;
+    background: #00527A;
     color: #ffffff; }
 
 .btn-tertiary {
@@ -104,35 +114,31 @@
     color: #ffffff;
     border-color: #016fad; }
   .btn-tertiary:active {
-    background: #016fad;
+    background: #00527A;
     color: #ffffff;
-    border-color: #016fad; }
+    border-color: #00527A; }
 
 .btn-sm {
-  height: 32px;
-  line-height: 28px;
-  padding: 0 16px;
+  line-height: 1;
+  padding: 6px 14px;
   font-size: 16px;
   font-weight: normal; }
 
 .btn-md {
-  height: 48px;
-  line-height: 44px;
-  padding: 0 24px;
+  line-height: 1;
+  padding: 13px 22px;
   font-size: 18px;
   font-weight: normal; }
 
 .btn-lg {
-  height: 60px;
-  line-height: 56px;
-  padding: 0 32px;
+  line-height: 1;
+  padding: 18px 30px;
   font-size: 20px;
   font-weight: normal; }
 
 .btn-xl {
-  height: 68px;
-  line-height: 64px;
-  padding: 0 40px;
+  line-height: 1;
+  padding: 20px 38px;
   font-size: 24px;
   font-weight: normal; }
 
@@ -155,6 +161,17 @@
 .cf:after {
   clear: both; }
 
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
 /**
  * For IE 6/7 only
  * Include this rule to trigger hasLayout and contain floats.
@@ -167,7 +184,7 @@
 
 .btn-wrapper {
   float: left;
-  width: 320px;
+  max-width: 360px;
   margin: 0 24px; }
   .btn-wrapper .btn {
     float: left;

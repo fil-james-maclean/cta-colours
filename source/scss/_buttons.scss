@@ -11,28 +11,54 @@
 */
 
 $white: #ffffff;
-$red-base: #b72f2a;
+$dark: #262626;
+
+
+$orange-base: #ff8d31;
+$orange-hover: #ffa801;
+$orange-active: #d14905;
+
+
+$green-base: #86c851;
+$green-hover: #a4d645;
+$green-active: #3b971e;
+
+
 $blue-base: #016fad;
+$blue-hover: #00a6e0;
+$blue-active: #00527A;
 
 
-$btn-border-width: 2px;
-$btn-border-radius: 6px;
+$btn-border-width: 2;
+$btn-border-radius: 4;
 
 
 /**
 * 2. Paste the colour names to apply them to the buttons
 */
 
-// Primary
+// Primary Orange
 
-$btn-primary-bg-normal:      $red-base;
-$btn-primary-txt-normal:     $white;
+$btn-primary-bg-normal:      $orange-base;
+$btn-primary-txt-normal:     $dark;
 
-$btn-primary-bg-hover:       $red-base;
-$btn-primary-txt-hover:      $white;
+$btn-primary-bg-hover:       $orange-hover;
+$btn-primary-txt-hover:      $dark;
 
-$btn-primary-bg-active:      $red-base;
+$btn-primary-bg-active:      $orange-active;
 $btn-primary-txt-active:     $white;
+
+
+// Primary Green
+
+$btn-primary2-bg-normal:      $green-base;
+$btn-primary2-txt-normal:     $dark;
+
+$btn-primary2-bg-hover:       $green-hover;
+$btn-primary2-txt-hover:      $dark;
+
+$btn-primary2-bg-active:      $green-active;
+$btn-primary2-txt-active:     $white;
 
 
 // Secondary
@@ -40,10 +66,10 @@ $btn-primary-txt-active:     $white;
 $btn-secondary-bg-normal:    $blue-base;
 $btn-secondary-txt-normal:   $white;
 
-$btn-secondary-bg-hover:     $blue-base;
-$btn-secondary-txt-hover:    $white;
+$btn-secondary-bg-hover:     $blue-hover;
+$btn-secondary-txt-hover:    $dark;
 
-$btn-secondary-bg-active:    $blue-base;
+$btn-secondary-bg-active:    $blue-active;
 $btn-secondary-txt-active:   $white;
 
 
@@ -55,7 +81,7 @@ $btn-tertiary-txt-normal:    $blue-base;
 $btn-tertiary-bg-hover:      $blue-base;
 $btn-tertiary-txt-hover:     $white;
 
-$btn-tertiary-bg-active:     $blue-base;
+$btn-tertiary-bg-active:     $blue-active;
 $btn-tertiary-txt-active:    $white;
 
 
@@ -77,7 +103,7 @@ $btn-sizes : (
 .btn {
     display: inline-block;
     position: relative;
-    border: $btn-border-width solid transparent;
+    border: #{$btn-border-width}px solid transparent;
     cursor: pointer;
     font-weight: normal;
     text-align: center;
@@ -91,10 +117,10 @@ $btn-sizes : (
 }
 
 .btn-radius {
-    border-radius: $btn-border-radius;
+    border-radius: #{$btn-border-radius}px;
 }
 
-.btn-primary {
+.btn-primary{
         background: $btn-primary-bg-normal;
         color: $btn-primary-txt-normal;
         &:hover {
@@ -106,6 +132,21 @@ $btn-sizes : (
             color: $btn-primary-txt-active;
         }
 }
+
+
+.btn-primary2 {
+        background: $btn-primary2-bg-normal;
+        color: $btn-primary2-txt-normal;
+        &:hover {
+            background: $btn-primary2-bg-hover;
+            color: $btn-primary2-txt-hover;
+        }
+        &:active {
+            background: $btn-primary2-bg-active;
+            color: $btn-primary2-txt-active;
+        }
+}
+
 
 .btn-secondary {
         background: $btn-secondary-bg-normal;
@@ -124,30 +165,32 @@ $btn-sizes : (
 .btn-tertiary {
         background: $btn-tertiary-bg-normal;
         color: $btn-tertiary-txt-normal;
-        border: $btn-border-width solid $btn-tertiary-txt-normal;
+        border: #{$btn-border-width}px solid $btn-tertiary-txt-normal;
         &:hover {
             background: $btn-tertiary-bg-hover;
             color: $btn-tertiary-txt-hover;
             border-color: $btn-tertiary-bg-hover;
         }
         &:active {
-            background: $btn-tertiary-bg-hover;
-            color: $btn-tertiary-txt-hover;
-            border-color: $btn-tertiary-bg-hover;
+            background: $btn-tertiary-bg-active;
+            color: $btn-tertiary-txt-active;
+            border-color: $btn-tertiary-bg-active;
         }
 }
 
 @each $size, $size-spec in $btn-sizes {
 
     $height: nth( $size-spec, 1 );
-    $side-padding: nth( $size-spec, 2 );
+    $side-padding: nth( $size-spec, 2 ) - $btn-border-width;
     $font-size: nth( $size-spec, 3 );
     $font-weight: nth( $size-spec, 4 );
+    $vertical-padding: ( $height - ($btn-border-width*2) - $font-size )/2 ;
 
     .btn-#{ $size } {
-        height: #{$height}px;
-        line-height: $height - ($btn-border-width*2);
-        padding: 0 #{$side-padding}px;
+        // height: #{$height}px;
+        // line-height: $height - ($btn-border-width*2);
+        line-height: 1;
+        padding: #{$vertical-padding}px #{$side-padding}px;
         font-size: #{$font-size}px;
         font-weight: $font-weight;
     }

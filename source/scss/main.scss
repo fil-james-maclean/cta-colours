@@ -22,6 +22,19 @@
     clear: both;
 }
 
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
 /**
  * For IE 6/7 only
  * Include this rule to trigger hasLayout and contain floats.
@@ -37,7 +50,7 @@
 
 .btn-wrapper {
     float: left;
-    width: 320px;
+    max-width: 360px;
     margin: 0 24px;
     .btn {
         float: left;
