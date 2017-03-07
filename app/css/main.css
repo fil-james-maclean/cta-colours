@@ -85,6 +85,19 @@
     background: #d14905;
     color: #ffffff; }
 
+.btn-primary-gradient {
+  background: #f68b0e;
+  /* Fallback */
+  background: -o-linear-gradient(top, #ec6e1a, #ffa801);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#ec6e1a', EndColorStr='#ffa801')";
+  color: #262626; }
+  .btn-primary-gradient:hover {
+    background: #ffa801;
+    color: #262626; }
+  .btn-primary-gradient:active {
+    background: #d14905;
+    color: #ffffff; }
+
 .btn-primary2 {
   background: #86c851;
   color: #262626; }
