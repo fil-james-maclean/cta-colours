@@ -1,0 +1,36 @@
+
+@font-face {
+    font-family: 'neuzeit_grotesk';
+    src: url( '#{ $fontPath }neuzeitgro/light/neuzeitgro-lig.eot' );
+    src: url( '#{ $fontPath }neuzeitgro/light/neuzeitgro-lig.eot?#iefix' ) format( 'embedded-opentype' ),
+        url( '#{ $fontPath }neuzeitgro/light/neuzeitgro-lig.woff2' ) format( 'woff2' ),
+        url( '#{ $fontPath }neuzeitgro/light/neuzeitgro-lig.woff' ) format( 'woff' ),
+        url( '#{ $fontPath }neuzeitgro/light/neuzeitgro-lig.ttf' ) format( 'truetype' ),
+        url( '#{ $fontPath }neuzeitgro/light/neuzeitgro-lig.svg#neuzeit_grotesklight' ) format( 'svg' );
+    font-weight: 300; // Light
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'neuzeit_grotesk';
+    src: url( '#{ $fontPath }neuzeitgro/regular/neuzeitgro-reg.eot' );
+    src: url( '#{ $fontPath }neuzeitgro/regular/neuzeitgro-reg.eot?#iefix' ) format( 'embedded-opentype' ),
+        url( '#{ $fontPath }neuzeitgro/regular/neuzeitgro-reg.woff2' ) format( 'woff2' ),
+        url( '#{ $fontPath }neuzeitgro/regular/neuzeitgro-reg.woff' ) format( 'woff' ),
+        url( '#{ $fontPath }neuzeitgro/regular/neuzeitgro-reg.ttf' ) format( 'truetype' ),
+        url( '#{ $fontPath }neuzeitgro/regular/neuzeitgro-reg.svg#neuzeit_groteskregular' ) format( 'svg' );
+    font-weight: normal; // Regular
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'neuzeit_grotesk';
+    src: url( '#{ $fontPath }neuzeitgro/bold/neuzeitgro-bol.eot' );
+    src: url( '#{ $fontPath }neuzeitgro/bold/neuzeitgro-bol.eot?#iefix' ) format( 'embedded-opentype' ),
+        url( '#{ $fontPath }neuzeitgro/bold/neuzeitgro-bol.woff2' ) format( 'woff2' ),
+        url( '#{ $fontPath }neuzeitgro/bold/neuzeitgro-bol.woff' ) format( 'woff' ),
+        url( '#{ $fontPath }neuzeitgro/bold/neuzeitgro-bol.ttf' ) format( 'truetype' ),
+        url( '#{ $fontPath }neuzeitgro/bold/neuzeitgro-bol.svg#neuzeit_groteskbold' ) format( 'svg' );
+    font-weight: bold; // Bold
+    font-style: normal;
+}

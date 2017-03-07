@@ -1,0 +1,230 @@
+/**
+ * Paths
+ */
+$imgPath:       '../images/';
+$fontPath:     '../fonts/';
+$icomoon-font-path: $fontPath;
+
+$base-font-size: 18px;
+$base-line-height: 26px;
+$base-gutter: 20px;
+$rhythm-base: 24px;
+$rhythm-unit: "px";
+
+
+$global-font-size: $base-font-size;
+$global-line-height: $base-line-height;
+$web-safe-font: Arial, Helvetica, sans-serif;
+$body-font-family: 'neuzeit_grotesk', #{ $web-safe-font };
+
+$breakpoint-small: 0;
+$breakpoint-medium: 640px;
+$breakpoint-large: 1024px;
+$breakpoint-wide: 1300px;
+
+$breakpoints: (
+    small: $breakpoint-small,
+    medium: $breakpoint-medium,
+    large: $breakpoint-large,
+    wide: $breakpoint-wide
+);
+$breakpoint-classes: (small medium large wide);
+
+
+$header-sizes-custom-medium: (
+        'h1': ( 70, 74, '300' ),
+        'h2': ( 48, 58, '300' ),
+        'h3': ( 32, 40, '300' ),
+        'h4': ( 26, 36, '300' ),
+        'h5': ( 18, 28, 'bold' ),
+        'h6': ( 18, 28, 'normal' ),
+);
+
+$header-sizes-custom-small: (
+        'h1': ( 45, 54, '300' ),
+        'h2': ( 38, 48, '300' ),
+        'h3': ( 30, 40, '300' ),
+        'h4': ( 26, 36, '300' ),
+        'h5': ( 18, 28, 'bold' ),
+        'h6': ( 18, 28, 'normal' ),
+);
+
+$grid-column-gutter: 80px; // 40px for each side.
+
+
+// Specific spacers
+$spacer-4: 4px; // 4px
+$spacer-8: 8px; // 8px
+$spacer-12: 12px; // 12px
+$spacer-16: 16px; // 16px
+$spacer-20: 20px; // 20px
+$spacer-24: 24px; // 24px
+$spacer-32: 32px; // 32px
+$spacer-48: 48px; // 48px
+$spacer-64: 64px; // 64px
+$spacer-128: 128px; // 128px
+
+
+
+
+
+/**
+ * FIL Brand colours
+ * Note: 1 = Darkest of palette
+ */
+$orange1: #F26730;
+$orange2: #E57725;
+$orange3: #FF8D31;
+$blue1: #006193;
+$blue2: #016FAD;
+$blue3: #00A6E0;
+$blue4: #EAF2F6;
+$green1: #339900;
+$green2: #91CC9B;
+$red1: #CC3333;
+$red2: #E78E91;
+$yellow1: #F0D202;
+$yellow2: #FFFDF3;
+$fidelity-blue: $blue1;
+$fidelity-red: #B72F2A;
+
+
+
+
+
+/**
+ * The Grey array
+ */
+$grey85: #262626;
+$grey60: #666666;
+$grey25: #BFBFBF;
+$grey15: #D9D9D9;
+$grey3: #F7F7F7;
+
+
+
+
+/**
+ * FIL Funds Network colours
+ */
+$FNW-grey1: #3E4552;
+$FNW-grey2: #515B6B;
+$FNW-grey3: #606B7E;
+$FNW-grey4: #868F9E;
+
+
+
+
+/**
+ * FIL Charting Colours
+ * Note: charting colours are named in the order they should be used
+ */
+$chart1: #024A7A;
+$chart2: #1DADE2;
+$chart3: #6F9824;
+$chart4: #FFCD00;
+$chart5: #DE5E06;
+$chart6: #9E5DCF;
+$chart7: #6893B0;
+$chart8: #011E31;
+$chart9: #757A02;
+$chart10: #CFD636;
+$chart11: #FB9914;
+$chart12: #7F05A2;
+$chart13: #78CEEE;
+$chart14: #0C465B;
+$chart15: #A9C27C;
+$chart16: #435C16;
+$chart17: #653E08;
+$chart18: #C578FF;
+
+
+
+
+
+/**
+ * Helper / Non specific colours
+ */
+$white: #FFFFFF;
+$black: #000000;
+$annotations: #FF00F8;
+
+
+
+
+/**
+ * Colour arrays
+ */
+// Fidelity Brand
+$FIL: (
+    'orange1' : $orange1,
+    'orange2' : $orange2,
+    'orange3' : $orange3,
+    'blue1' : $blue1,
+    'blue2' : $blue2,
+    'blue3' : $blue3,
+    'blue4' : $blue4,
+    'green1' : $green1,
+    'green2' : $green2,
+    'red1' : $red1,
+    'red2' : $red2,
+    'yellow1' : $yellow1,
+    'yellow2' : $yellow2,
+    'fidelity-blue' : $fidelity-blue,
+    'fidelity-red' : $fidelity-red,
+    'grey85' : $grey85,
+    'grey60' : $grey60,
+    'grey25' : $grey25,
+    'grey15' : $grey15,
+    'grey3' : $grey3
+);
+
+$FIL-Greys: (
+    'grey85' : $grey85,
+    'grey60' : $grey60,
+    'grey25' : $grey25,
+    'grey15' : $grey15,
+    'grey3' : $grey3
+);
+
+// Funds Network
+$FIL-FNW: (
+    'FNW-grey1' : $FNW-grey1,
+    'FNW-grey2' : $FNW-grey2,
+    'FNW-grey3' : $FNW-grey3,
+    'FNW-grey4' : $FNW-grey4
+);
+
+// Charting
+$FIL-Charting: (
+    'chart1' : $chart1,
+    'chart2' : $chart2,
+    'chart3' : $chart3,
+    'chart4' : $chart4,
+    'chart5' : $chart5,
+    'chart6' : $chart6,
+    'chart7' : $chart7,
+    'chart8' : $chart8,
+    'chart9' : $chart9,
+    'chart10' : $chart10,
+    'chart11' : $chart11,
+    'chart12' : $chart12,
+    'chart13' : $chart13,
+    'chart14' : $chart14,
+    'chart15' : $chart15,
+    'chart16' : $chart16,
+    'chart17' : $chart17,
+    'chart18' : $chart18
+);
+
+// Helpers
+$FIL-Helpers: (
+    'white' : $white,
+    'black' : $black,
+    'annotations' : $annotations
+);
+
+$body-font-color: $grey85;
+$anchor-color: $blue1;
+$anchor-color-hover: $blue3;
+$border-color: $grey25;
