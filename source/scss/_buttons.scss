@@ -18,8 +18,8 @@ $orange-base: #ff8d31;
 $orange-hover: #ffa801;
 $orange-active: #d14905;
 
-$orange-gradient-base-top: #ec6e1a;
-$orange-gradient-base-bottom: #ffa801;
+$orange-gradient-base-top: #ffa801;
+$orange-gradient-base-bottom: #ec6e1a;
 $orange-gradient-hover-top: $orange-gradient-base-bottom;
 $orange-gradient-hover-bottom: $orange-gradient-base-top;
 $orange-gradient-active-top: #9c3400;
@@ -32,8 +32,8 @@ $green-active: #3b971e;
 
 $green-gradient-base-top: #a4d645;
 $green-gradient-base-bottom: #65a432;
-$green-gradient-hover-top: $orange-gradient-base-bottom;
-$green-gradient-hover-bottom: $orange-gradient-base-top;
+$green-gradient-hover-top: $green-gradient-base-bottom;
+$green-gradient-hover-bottom: $green-gradient-base-top;
 $green-gradient-active-top: #3b971e;
 $green-gradient-active-bottom: #256d0e;
 
@@ -41,6 +41,13 @@ $green-gradient-active-bottom: #256d0e;
 $blue-base: #016fad;
 $blue-hover: #00a6e0;
 $blue-active: #00527A;
+
+$blue-gradient-base-top: #016fad;
+$blue-gradient-base-bottom: #004161;
+$blue-gradient-hover-top: $blue-gradient-base-bottom;
+$blue-gradient-hover-bottom: $blue-gradient-base-top;
+$blue-gradient-active-top: #002639;
+$blue-gradient-active-bottom: #00527a;
 
 
 $btn-border-width: 2;
@@ -151,11 +158,11 @@ $btn-sizes : (
         @include gradient($orange-gradient-base-top, $orange-gradient-base-bottom);
         color: $btn-primary-txt-normal;
         &:hover {
-            background: $btn-primary-bg-hover;
+            @include gradient($orange-gradient-hover-top, $orange-gradient-hover-bottom);
             color: $btn-primary-txt-hover;
         }
         &:active {
-            background: $btn-primary-bg-active;
+            @include gradient($orange-gradient-active-top, $orange-gradient-active-bottom);
             color: $btn-primary-txt-active;
         }
 }
@@ -174,6 +181,18 @@ $btn-sizes : (
         }
 }
 
+.btn-primary2-gradient {
+        @include gradient($green-gradient-base-top, $green-gradient-base-bottom);
+        color: $btn-primary-txt-normal;
+        &:hover {
+            @include gradient($green-gradient-hover-top, $green-gradient-hover-bottom);
+            color: $btn-primary-txt-hover;
+        }
+        &:active {
+            @include gradient($green-gradient-active-top, $green-gradient-active-bottom);
+            color: $btn-primary-txt-active;
+        }
+}
 
 .btn-secondary {
         background: $btn-secondary-bg-normal;
@@ -188,6 +207,18 @@ $btn-sizes : (
         }
 }
 
+.btn-secondary-gradient {
+        @include gradient($blue-gradient-base-top, $blue-gradient-base-bottom);
+        color: $btn-secondary-txt-normal;
+        &:hover {
+            @include gradient($blue-gradient-hover-top, $blue-gradient-hover-bottom);
+        //     color: $btn-secondary-txt-hover;
+        }
+        &:active {
+            @include gradient($blue-gradient-active-top, $blue-gradient-active-bottom);
+        //     color: $btn-secondary-txt-active;
+        }
+}
 
 .btn-tertiary {
         background: $btn-tertiary-bg-normal;
@@ -202,6 +233,23 @@ $btn-sizes : (
             background: $btn-tertiary-bg-active;
             color: $btn-tertiary-txt-active;
             border-color: $btn-tertiary-bg-active;
+        }
+}
+
+
+.btn-tertiary-gradient {
+        background: $btn-tertiary-bg-normal;
+        color: $btn-tertiary-txt-normal;
+        border: #{$btn-border-width}px solid $btn-tertiary-txt-normal;
+        &:hover {
+            border-color: transparent;
+            @include gradient($blue-gradient-hover-top, $blue-gradient-hover-bottom);
+            color: $btn-tertiary-txt-hover;
+        }
+        &:active {
+                border-color: transparent;
+            @include gradient($blue-gradient-active-top, $blue-gradient-active-bottom);
+            color: $btn-tertiary-txt-active;
         }
 }
 

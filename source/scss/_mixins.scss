@@ -1,9 +1,7 @@
 @mixin gradient($from-color, $to-color) {
     background: mix($from-color, $to-color); /* Fallback */
-    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from($from-color), to($to-color));
-    background: -webkit-linear-gradient(top, $from-color, $to-color);
-    background:    -moz-linear-gradient(top, $from-color, $to-color);
-    background:     -ms-linear-gradient(top, $from-color, $to-color);
-    background:      -o-linear-gradient(top, $from-color, $to-color);
+    background-image: linear-gradient(to bottom, $from-color 25%, $to-color 75%);
+    background-size: 100% 200%;
+    background-position: 0 50%;
     -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#{$from-color}', EndColorStr='#{$to-color}')";
 }
