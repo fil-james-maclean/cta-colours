@@ -1,10 +1,27 @@
+/**
+* 1. Define colour variables
+* 2. Apply colour variables to the button variables
+* 3. Change sizes of buttons
+*/
+
 
 // Colours
+/**
+* 1. ADD colours to try out here
+*/
 
 $white: #ffffff;
 $red-base: #b72f2a;
 $blue-base: #016fad;
 
+
+$btn-border-width: 2px;
+$btn-border-radius: 6px;
+
+
+/**
+* 2. Paste the colour names to apply them to the buttons
+*/
 
 // Primary
 
@@ -41,13 +58,11 @@ $btn-tertiary-txt-hover:     $white;
 $btn-tertiary-bg-active:     $blue-base;
 $btn-tertiary-txt-active:    $white;
 
-$btn-border-width: 2px;
 
-
-$border-radius: 6px;
 
 /**
-* 'size': ( height, side-padding, font-size, 'font-weight' ),
+* 3. change size of buttons in the array below.
+* KEY = 'size': ( height, side-padding, font-size, font-weight ),
 */
 
 $btn-sizes : (
@@ -76,7 +91,7 @@ $btn-sizes : (
 }
 
 .btn-radius {
-    border-radius: $border-radius;
+    border-radius: $btn-border-radius;
 }
 
 .btn-primary {

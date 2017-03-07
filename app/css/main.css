@@ -43,7 +43,19 @@
   font-style: normal; }
 
 /**
-* 'size': ( height, side-padding, font-size, 'font-weight' ),
+* 1. Define colour variables
+* 2. Apply colour variables to the button variables
+* 3. Change sizes of buttons
+*/
+/**
+* 1. ADD colours to try out here
+*/
+/**
+* 2. Paste the colour names to apply them to the buttons
+*/
+/**
+* 3. change size of buttons in the array below.
+* KEY = 'size': ( height, side-padding, font-size, font-weight ),
 */
 .btn {
   display: inline-block;
