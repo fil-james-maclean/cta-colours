@@ -60,50 +60,50 @@ $btn-border-radius: 4;
 
 // primary Orange
 
-$btn-primary-orange-bg-normal:      $orange-normal;
-$btn-primary-orange-txt-normal:     $dark;
+$orange-normal:      $orange-normal;
+$dark:     $dark;
 
-$btn-primary-orange-bg-hover:       $orange-hover;
-$btn-primary-orange-txt-hover:      $dark;
+$orange-hover:       $orange-hover;
+$dark:      $dark;
 
-$btn-primary-orange-bg-active:      $orange-active;
-$btn-primary-orange-txt-active:     $white;
+$orange-active:      $orange-active;
+$white:     $white;
 
 
 // primary Green
 
-$btn-primary-green-bg-normal:      $green-normal;
-$btn-primary-green-txt-normal:     $dark;
+$green-normal:      $green-normal;
+$dark:     $dark;
 
-$btn-primary-green-bg-hover:       $green-hover;
-$btn-primary-green-txt-hover:      $dark;
+$green-hover:       $green-hover;
+$dark:      $dark;
 
-$btn-primary-green-bg-active:      $green-active;
-$btn-primary-green-txt-active:     $white;
+$green-active:      $green-active;
+$white:     $white;
 
 
 // Secondary
 
-$btn-secondary-bg-normal:    $blue-normal;
-$btn-secondary-txt-normal:   $white;
+$blue-normal:    $blue-normal;
+$white:   $white;
 
-$btn-secondary-bg-hover:     $blue-hover;
-$btn-secondary-txt-hover:    $dark;
+$blue-hover:     $blue-hover;
+$dark:    $dark;
 
-$btn-secondary-bg-active:    $blue-active;
-$btn-secondary-txt-active:   $white;
+$blue-active:    $blue-active;
+$white:   $white;
 
 
 // Tertiary
 
-$btn-tertiary-bg-normal:     $white;
-$btn-tertiary-txt-normal:    $blue-normal;
+$white:     $white;
+$blue-normal:    $blue-normal;
 
-$btn-tertiary-bg-hover:      $blue-normal;
-$btn-tertiary-txt-hover:     $white;
+$blue-normal:      $blue-normal;
+$white:     $white;
 
-$btn-tertiary-bg-active:     $blue-active;
-$btn-tertiary-txt-active:    $white;
+$blue-active:     $blue-active;
+$white:    $white;
 
 
 
@@ -142,114 +142,114 @@ $btn-sizes : (
 }
 
 .btn-primary-orange{
-        background: $btn-primary-orange-bg-normal;
-        color: $btn-primary-orange-txt-normal;
+        background: $orange-normal;
+        color: $dark;
         &:hover {
-            background: $btn-primary-orange-bg-hover;
-            color: $btn-primary-orange-txt-hover;
+            background: $orange-hover;
+            color: $dark;
         }
         &:active {
-            background: $btn-primary-orange-bg-active;
-            color: $btn-primary-orange-txt-active;
+            background: $orange-active;
+            color: $white;
         }
 }
 
 .btn-primary-orange-gradient {
         @include gradient($orange-gradient-normal-top, $orange-gradient-normal-bottom);
-        color: $btn-primary-orange-txt-normal;
+        color: $dark;
         &:hover {
             @include gradient($orange-gradient-hover-top, $orange-gradient-hover-bottom);
-            color: $btn-primary-orange-txt-hover;
+            color: $dark;
         }
         &:active {
             @include gradient($orange-gradient-active-top, $orange-gradient-active-bottom);
-            color: $btn-primary-orange-txt-active;
+            color: $white;
         }
 }
 
 
 .btn-primary-green {
-        background: $btn-primary-green-bg-normal;
-        color: $btn-primary-green-txt-normal;
+        background: $green-normal;
+        color: $dark;
         &:hover {
-            background: $btn-primary-green-bg-hover;
-            color: $btn-primary-green-txt-hover;
+            background: $green-hover;
+            color: $dark;
         }
         &:active {
-            background: $btn-primary-green-bg-active;
-            color: $btn-primary-green-txt-active;
+            background: $green-active;
+            color: $white;
         }
 }
 
 .btn-primary-green-gradient {
         @include gradient($green-gradient-normal-top, $green-gradient-normal-bottom);
-        color: $btn-primary-orange-txt-normal;
+        color: $dark;
         &:hover {
             @include gradient($green-gradient-hover-top, $green-gradient-hover-bottom);
-            color: $btn-primary-orange-txt-hover;
+            color: $dark;
         }
         &:active {
             @include gradient($green-gradient-active-top, $green-gradient-active-bottom);
-            color: $btn-primary-orange-txt-active;
+            color: $white;
         }
 }
 
 .btn-secondary {
-        background: $btn-secondary-bg-normal;
-        color: $btn-secondary-txt-normal;
+        background: $blue-normal;
+        color: $white;
         &:hover {
-            background: $btn-secondary-bg-hover;
-            color: $btn-secondary-txt-hover;
+            background: $blue-hover;
+            color: $dark;
         }
         &:active {
-            background: $btn-secondary-bg-active;
-            color: $btn-secondary-txt-active;
+            background: $blue-active;
+            color: $white;
         }
 }
 
 .btn-secondary-gradient {
         @include gradient($blue-gradient-normal-top, $blue-gradient-normal-bottom);
-        color: $btn-secondary-txt-normal;
+        color: $white;
         &:hover {
             @include gradient($blue-gradient-hover-top, $blue-gradient-hover-bottom);
-        //     color: $btn-secondary-txt-hover;
+        //     color: $dark;
         }
         &:active {
             @include gradient($blue-gradient-active-top, $blue-gradient-active-bottom);
-        //     color: $btn-secondary-txt-active;
+        //     color: $white;
         }
 }
 
 .btn-tertiary {
-        background: $btn-tertiary-bg-normal;
-        color: $btn-tertiary-txt-normal;
-        border: #{$btn-border-width}px solid $btn-tertiary-txt-normal;
+        background: $white;
+        color: $blue-normal;
+        border: #{$btn-border-width}px solid $blue-normal;
         &:hover {
-            background: $btn-tertiary-bg-hover;
-            color: $btn-tertiary-txt-hover;
-            border-color: $btn-tertiary-bg-hover;
+            background: $blue-normal;
+            color: $white;
+            border-color: $blue-normal;
         }
         &:active {
-            background: $btn-tertiary-bg-active;
-            color: $btn-tertiary-txt-active;
-            border-color: $btn-tertiary-bg-active;
+            background: $blue-active;
+            color: $white;
+            border-color: $blue-active;
         }
 }
 
 
 .btn-tertiary-gradient {
-        background: $btn-tertiary-bg-normal;
-        color: $btn-tertiary-txt-normal;
-        border: #{$btn-border-width}px solid $btn-tertiary-txt-normal;
+        background: $white;
+        color: $blue-normal;
+        border: #{$btn-border-width}px solid $blue-normal;
         &:hover {
             border-color: transparent;
             @include gradient($blue-gradient-hover-top, $blue-gradient-hover-bottom);
-            color: $btn-tertiary-txt-hover;
+            color: $white;
         }
         &:active {
                 border-color: transparent;
             @include gradient($blue-gradient-active-top, $blue-gradient-active-bottom);
-            color: $btn-tertiary-txt-active;
+            color: $white;
         }
 }
 
