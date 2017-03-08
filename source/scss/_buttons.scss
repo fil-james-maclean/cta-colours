@@ -58,28 +58,28 @@ $btn-border-radius: 4;
 * 2. Paste the colour names to apply them to the buttons
 */
 
-// Primary Orange
+// primary Orange
 
-$btn-primary-bg-normal:      $orange-normal;
-$btn-primary-txt-normal:     $dark;
+$btn-primary-orange-bg-normal:      $orange-normal;
+$btn-primary-orange-txt-normal:     $dark;
 
-$btn-primary-bg-hover:       $orange-hover;
-$btn-primary-txt-hover:      $dark;
+$btn-primary-orange-bg-hover:       $orange-hover;
+$btn-primary-orange-txt-hover:      $dark;
 
-$btn-primary-bg-active:      $orange-active;
-$btn-primary-txt-active:     $white;
+$btn-primary-orange-bg-active:      $orange-active;
+$btn-primary-orange-txt-active:     $white;
 
 
-// Primary Green
+// primary Green
 
-$btn-primary2-bg-normal:      $green-normal;
-$btn-primary2-txt-normal:     $dark;
+$btn-primary-green-bg-normal:      $green-normal;
+$btn-primary-green-txt-normal:     $dark;
 
-$btn-primary2-bg-hover:       $green-hover;
-$btn-primary2-txt-hover:      $dark;
+$btn-primary-green-bg-hover:       $green-hover;
+$btn-primary-green-txt-hover:      $dark;
 
-$btn-primary2-bg-active:      $green-active;
-$btn-primary2-txt-active:     $white;
+$btn-primary-green-bg-active:      $green-active;
+$btn-primary-green-txt-active:     $white;
 
 
 // Secondary
@@ -141,56 +141,56 @@ $btn-sizes : (
     border-radius: #{$btn-border-radius}px;
 }
 
-.btn-primary{
-        background: $btn-primary-bg-normal;
-        color: $btn-primary-txt-normal;
+.btn-primary-orange{
+        background: $btn-primary-orange-bg-normal;
+        color: $btn-primary-orange-txt-normal;
         &:hover {
-            background: $btn-primary-bg-hover;
-            color: $btn-primary-txt-hover;
+            background: $btn-primary-orange-bg-hover;
+            color: $btn-primary-orange-txt-hover;
         }
         &:active {
-            background: $btn-primary-bg-active;
-            color: $btn-primary-txt-active;
+            background: $btn-primary-orange-bg-active;
+            color: $btn-primary-orange-txt-active;
         }
 }
 
-.btn-primary-gradient {
+.btn-primary-orange-gradient {
         @include gradient($orange-gradient-normal-top, $orange-gradient-normal-bottom);
-        color: $btn-primary-txt-normal;
+        color: $btn-primary-orange-txt-normal;
         &:hover {
             @include gradient($orange-gradient-hover-top, $orange-gradient-hover-bottom);
-            color: $btn-primary-txt-hover;
+            color: $btn-primary-orange-txt-hover;
         }
         &:active {
             @include gradient($orange-gradient-active-top, $orange-gradient-active-bottom);
-            color: $btn-primary-txt-active;
+            color: $btn-primary-orange-txt-active;
         }
 }
 
 
-.btn-primary2 {
-        background: $btn-primary2-bg-normal;
-        color: $btn-primary2-txt-normal;
+.btn-primary-green {
+        background: $btn-primary-green-bg-normal;
+        color: $btn-primary-green-txt-normal;
         &:hover {
-            background: $btn-primary2-bg-hover;
-            color: $btn-primary2-txt-hover;
+            background: $btn-primary-green-bg-hover;
+            color: $btn-primary-green-txt-hover;
         }
         &:active {
-            background: $btn-primary2-bg-active;
-            color: $btn-primary2-txt-active;
+            background: $btn-primary-green-bg-active;
+            color: $btn-primary-green-txt-active;
         }
 }
 
-.btn-primary2-gradient {
+.btn-primary-green-gradient {
         @include gradient($green-gradient-normal-top, $green-gradient-normal-bottom);
-        color: $btn-primary-txt-normal;
+        color: $btn-primary-orange-txt-normal;
         &:hover {
             @include gradient($green-gradient-hover-top, $green-gradient-hover-bottom);
-            color: $btn-primary-txt-hover;
+            color: $btn-primary-orange-txt-hover;
         }
         &:active {
             @include gradient($green-gradient-active-top, $green-gradient-active-bottom);
-            color: $btn-primary-txt-active;
+            color: $btn-primary-orange-txt-active;
         }
 }
 
