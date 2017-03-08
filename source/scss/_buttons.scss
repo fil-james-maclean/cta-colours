@@ -147,14 +147,17 @@ $btn-sizes : (
 }
 
 .btn-primary-green-gradient {
-        @include gradient($green-gradient-normal-top, $green-gradient-normal-bottom);
+        @include gradient($green-gradient-normal-top,
+                          $green-gradient-normal-bottom);
         color: $dark;
         &:hover {
-            @include gradient($green-gradient-hover-top, $green-gradient-hover-bottom);
+            @include gradient($green-gradient-hover-top,
+                              $green-gradient-hover-bottom);
             color: $dark;
         }
         &:active {
-            @include gradient($green-gradient-active-top, $green-gradient-active-bottom);
+            @include gradient($green-gradient-active-top,
+                              $green-gradient-active-bottom);
             color: $white;
         }
 }
@@ -173,14 +176,17 @@ $btn-sizes : (
 }
 
 .btn-secondary-gradient {
-        @include gradient($blue-gradient-normal-top, $blue-gradient-normal-bottom);
+        @include gradient($blue-gradient-normal-top,
+                          $blue-gradient-normal-bottom);
         color: $white;
         &:hover {
-            @include gradient($blue-gradient-hover-top, $blue-gradient-hover-bottom);
+            @include gradient($blue-gradient-hover-top,
+                              $blue-gradient-hover-bottom);
         //     color: $dark;
         }
         &:active {
-            @include gradient($blue-gradient-active-top, $blue-gradient-active-bottom);
+            @include gradient($blue-gradient-active-top,
+                              $blue-gradient-active-bottom);
         //     color: $white;
         }
 }
@@ -208,12 +214,14 @@ $btn-sizes : (
         border: #{$btn-border-width}px solid $blue-normal;
         &:hover {
             border-color: transparent;
-            @include gradient($blue-gradient-hover-top, $blue-gradient-hover-bottom);
+            @include gradient($blue-gradient-hover-top,
+                              $blue-gradient-hover-bottom);
             color: $white;
         }
         &:active {
-                border-color: transparent;
-            @include gradient($blue-gradient-active-top, $blue-gradient-active-bottom);
+            border-color: transparent;
+            @include gradient($blue-gradient-active-top,
+                              $blue-gradient-active-bottom);
             color: $white;
         }
 }
