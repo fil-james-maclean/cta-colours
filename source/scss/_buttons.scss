@@ -42,29 +42,63 @@ $orange-gradient-hover-bottom: $orange-gradient-normal-top;
 $orange-gradient-active-top: #9c3400;
 $orange-gradient-active-bottom: #d14905;
 
+$orange-white-normal: $white;
+$orange-white-hover: #fbcf7b;
+$orange-white-active: $orange-hover;
+
+$orange-white-gradient-normal-top: $white;
+$orange-white-gradient-normal-bottom: #fde7bd;
+$orange-white-gradient-hover-top: $orange-white-gradient-normal-bottom;
+$orange-white-gradient-hover-bottom: $orange-white-gradient-normal-top;
+$orange-white-gradient-active-top: #e89346;
+$orange-white-gradient-active-bottom: #fbcf7b;
+
+
 
 $green-normal: #86c851;
 $green-hover: #a4d645;
 $green-active: #3b971e;
 
-$green-gradient-normal-top: #a4d645;
+$green-gradient-normal-top: $green-hover;
 $green-gradient-normal-bottom: #65a432;
 $green-gradient-hover-top: $green-gradient-normal-bottom;
 $green-gradient-hover-bottom: $green-gradient-normal-top;
-$green-gradient-active-top: #3b971e;
+$green-gradient-active-top: $green-active;
 $green-gradient-active-bottom: #256d0e;
+
+$green-white-normal: $white;
+$green-white-hover: #cce793;
+$green-white-active: $green-hover;
+
+$green-white-gradient-normal-top: $white;
+$green-white-gradient-normal-bottom: #e6f3c9;
+$green-white-gradient-hover-top: $green-white-gradient-normal-bottom;
+$green-white-gradient-hover-bottom: $green-white-gradient-normal-top;
+$green-white-gradient-active-top: #8bc35e;
+$green-white-gradient-active-bottom: #cce793;
 
 
 $blue-normal: #016fad;
 $blue-hover: #00a6e0;
 $blue-active: #00527A;
 
-$blue-gradient-normal-top: #016fad;
+$blue-gradient-normal-top: $blue-normal;
 $blue-gradient-normal-bottom: #004161;
 $blue-gradient-hover-top: $blue-gradient-normal-bottom;
 $blue-gradient-hover-bottom: $blue-gradient-normal-top;
 $blue-gradient-active-top: #002639;
 $blue-gradient-active-bottom: #00527a;
+
+$blue-white-normal: $white;
+$blue-white-hover: #7eceeb;
+$blue-white-active: $blue-hover;
+
+$blue-white-gradient-normal-top: $white;
+$blue-white-gradient-normal-bottom: #bfe7f5;
+$blue-white-gradient-hover-top: $blue-white-gradient-normal-bottom;
+$blue-white-gradient-hover-bottom: $blue-white-gradient-normal-top;
+$blue-white-gradient-active-top: #44bce7;
+$blue-white-gradient-active-bottom: #7bceed;
 
 
 $btn-border-width: 2;
@@ -95,7 +129,7 @@ $btn-sizes : (
     text-align: center;
     text-decoration: none;
     appearance: none;
-    transition: background 0.2s ease, color 0.2s ease;
+    transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 
     &:focus {
         outline: none;
@@ -106,30 +140,60 @@ $btn-sizes : (
     border-radius: #{$btn-border-radius}px;
 }
 
-.btn-primary-orange{
-        background: $orange-normal;
+.btn-primary-orange {
+    background: $orange-normal;
+    color: $dark;
+    &:hover {
+        background: $orange-hover;
+        color: $dark;
+    }
+    &:active {
+        background: $orange-active;
+        color: $white;
+    }
+    &.white {
+        background: $orange-white-normal;
         color: $dark;
         &:hover {
-            background: $orange-hover;
+            background: $orange-white-hover;
             color: $dark;
         }
         &:active {
-            background: $orange-active;
-            color: $white;
+            background: $orange-white-active;
+            color: $dark;
         }
+    }
 }
 
 .btn-primary-orange-gradient {
-        @include gradient($orange-gradient-normal-top, $orange-gradient-normal-bottom);
+    @include gradient($orange-gradient-normal-top, 0%,
+                      $orange-gradient-normal-bottom, 100%);
+    color: $dark;
+    &:hover {
+        @include gradient($orange-gradient-hover-top, 0%,
+                          $orange-gradient-hover-bottom, 100%);
+        color: $dark;
+    }
+    &:active {
+        @include gradient($orange-gradient-active-top, 0%,
+                          $orange-gradient-active-bottom, 100%);
+        color: $white;
+    }
+    &.white {
+        @include gradient($orange-white-gradient-normal-top, 50%,
+                          $orange-white-gradient-normal-bottom, 100%);
         color: $dark;
         &:hover {
-            @include gradient($orange-gradient-hover-top, $orange-gradient-hover-bottom);
+            @include gradient($orange-white-gradient-hover-top, 0%,
+                              $orange-white-gradient-hover-bottom, 50%);
             color: $dark;
         }
         &:active {
-            @include gradient($orange-gradient-active-top, $orange-gradient-active-bottom);
-            color: $white;
+            @include gradient($orange-white-gradient-active-top, 0%,
+                              $orange-white-gradient-active-bottom, 100%);
+            color: $dark;
         }
+    }
 }
 
 
@@ -144,21 +208,48 @@ $btn-sizes : (
             background: $green-active;
             color: $white;
         }
+        &.white {
+            background: $green-white-normal;
+            color: $dark;
+            &:hover {
+                background: $green-white-hover;
+                color: $dark;
+            }
+            &:active {
+                background: $green-white-active;
+                color: $dark;
+            }
+        }
 }
 
 .btn-primary-green-gradient {
-        @include gradient($green-gradient-normal-top,
-                          $green-gradient-normal-bottom);
+        @include gradient($green-gradient-normal-top, 0%,
+                          $green-gradient-normal-bottom, 100%);
         color: $dark;
         &:hover {
-            @include gradient($green-gradient-hover-top,
-                              $green-gradient-hover-bottom);
+            @include gradient($green-gradient-hover-top, 0%,
+                              $green-gradient-hover-bottom, 100%);
             color: $dark;
         }
         &:active {
-            @include gradient($green-gradient-active-top,
-                              $green-gradient-active-bottom);
+            @include gradient($green-gradient-active-top, 0%,
+                              $green-gradient-active-bottom, 100%);
             color: $white;
+        }
+        &.white {
+            @include gradient($green-white-gradient-normal-top, 50%,
+                              $green-white-gradient-normal-bottom, 100%);
+            color: $dark;
+            &:hover {
+                @include gradient($green-white-gradient-hover-top, 0%,
+                                  $green-white-gradient-hover-bottom, 50%);
+                color: $dark;
+            }
+            &:active {
+                @include gradient($green-white-gradient-active-top, 0%,
+                                  $green-white-gradient-active-bottom, 100%);
+                color: $dark;
+            }
         }
 }
 
@@ -173,21 +264,48 @@ $btn-sizes : (
             background: $blue-active;
             color: $white;
         }
+        &.white {
+            background: $blue-white-normal;
+            color: $dark;
+            &:hover {
+                background: $blue-white-hover;
+                color: $dark;
+            }
+            &:active {
+                background: $blue-white-active;
+                color: $dark;
+            }
+        }
 }
 
 .btn-secondary-gradient {
-        @include gradient($blue-gradient-normal-top,
-                          $blue-gradient-normal-bottom);
+        @include gradient($blue-gradient-normal-top, 0%,
+                          $blue-gradient-normal-bottom, 100%);
         color: $white;
         &:hover {
-            @include gradient($blue-gradient-hover-top,
-                              $blue-gradient-hover-bottom);
+            @include gradient($blue-gradient-hover-top, 0%,
+                              $blue-gradient-hover-bottom, 100%);
         //     color: $dark;
         }
         &:active {
-            @include gradient($blue-gradient-active-top,
-                              $blue-gradient-active-bottom);
+            @include gradient($blue-gradient-active-top, 0%,
+                              $blue-gradient-active-bottom, 100%);
         //     color: $white;
+        }
+        &.white {
+            @include gradient($blue-white-gradient-normal-top, 50%,
+                              $blue-white-gradient-normal-bottom, 100%);
+            color: $dark;
+            &:hover {
+                @include gradient($blue-white-gradient-hover-top, 0%,
+                                  $blue-white-gradient-hover-bottom, 50%);
+                color: $dark;
+            }
+            &:active {
+                @include gradient($blue-white-gradient-active-top, 0%,
+                                  $blue-white-gradient-active-bottom, 100%);
+                color: $dark;
+            }
         }
 }
 
@@ -205,6 +323,21 @@ $btn-sizes : (
             color: $white;
             border-color: $blue-active;
         }
+        &.white {
+            background: transparent;
+            color: $white;
+            border: #{$btn-border-width}px solid $white;
+            &:hover {
+                background: $white;
+                color: $dark;
+                // border-color: $white;
+            }
+            &:active {
+                background: $blue-hover;
+                // color: $dark;
+                border-color: $blue-hover;
+            }
+        }
 }
 
 
@@ -214,16 +347,34 @@ $btn-sizes : (
         border: #{$btn-border-width}px solid $blue-normal;
         &:hover {
             border-color: transparent;
-            @include gradient($blue-gradient-hover-top,
-                              $blue-gradient-hover-bottom);
+            @include gradient($blue-gradient-hover-top, 0%,
+                              $blue-gradient-hover-bottom, 100%);
             color: $white;
         }
         &:active {
             border-color: transparent;
-            @include gradient($blue-gradient-active-top,
-                              $blue-gradient-active-bottom);
+            @include gradient($blue-gradient-active-top, 0%,
+                              $blue-gradient-active-bottom, 100%);
             color: $white;
         }
+        &.white {
+            background: transparent;
+            color: $white;
+            border: #{$btn-border-width}px solid $white;
+            &:hover {
+                @include gradient($blue-white-gradient-hover-top, 0%,
+                                  $blue-white-gradient-hover-bottom, 50%);
+                color: $dark;
+                border-color: transparent;
+            }
+            &:active {
+                @include gradient($blue-white-gradient-active-top, 0%,
+                                  $blue-white-gradient-active-bottom, 100%);
+                color: $dark;
+                border-color: transparent;
+            }
+        }
+
 }
 
 @each $size, $size-spec in $btn-sizes {

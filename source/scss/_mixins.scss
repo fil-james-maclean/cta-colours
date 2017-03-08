@@ -1,6 +1,10 @@
-@mixin gradient($from-color, $to-color) {
+@mixin gradient($from-color, $from-pos, $to-color, $to-pos) {
+
+    $adjusted-from-pos: ($from-pos + 50)/2;
+    $adjusted-to-pos: ($to-pos + 50)/2;
+
     background: mix($from-color, $to-color); /* Fallback */
-    background-image: linear-gradient(to bottom, $from-color 25%, $to-color 75%);
+    background-image: linear-gradient(to bottom, $from-color $adjusted-from-pos, $to-color $adjusted-to-pos);
     background-size: 100% 200%;
     background-position: 0 50%;
     -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#{$from-color}', EndColorStr='#{$to-color}')";
