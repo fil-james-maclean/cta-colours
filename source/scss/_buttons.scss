@@ -77,9 +77,14 @@ $green-white-gradient-hover-bottom: $green-white-gradient-normal-top;
 $green-white-gradient-active-top: #8bc35e;
 $green-white-gradient-active-bottom: #cce793;
 
+// DARKER OLD
+// $blue-normal: #016fad;
+// $blue-hover: #00a6e0;
+// $blue-active: #00527A;
 
-$blue-normal: #016fad;
-$blue-hover: #00a6e0;
+// BRIGHTER
+$blue-normal: #00a6e0;
+$blue-hover: #38cbff;
 $blue-active: #00527A;
 
 $blue-gradient-normal-top: $blue-normal;
@@ -255,7 +260,7 @@ $btn-sizes : (
 
 .btn-secondary {
         background: $blue-normal;
-        color: $white;
+        color: $dark;
         &:hover {
             background: $blue-hover;
             color: $dark;
@@ -315,7 +320,7 @@ $btn-sizes : (
         border: #{$btn-border-width}px solid $blue-normal;
         &:hover {
             background: $blue-normal;
-            color: $white;
+            color: $dark;
             border-color: $blue-normal;
         }
         &:active {
